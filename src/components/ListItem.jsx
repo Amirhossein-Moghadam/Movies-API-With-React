@@ -22,7 +22,12 @@ const ListItem = ({ text, rate, onClick, mode }) => {
           >
             <div>
               <b className="text-dark">{`${text} , ${rate}`}</b>
-              <Badge variant="info" className="ml-2" onClick={onClick} style={{cursor:"pointer"}}>
+              <Badge
+                variant="info"
+                className="ml-2"
+                onClick={onClick}
+                style={{ cursor: "pointer", color: "white" }}
+              >
                 Detail
               </Badge>
             </div>

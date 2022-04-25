@@ -20,17 +20,18 @@ function App() {
     }, 1000);
   }, []);
 
-  if (loading) {
-    return (
-      <Container className="d-flex justify-content-center mt-5">
-        <Loading />
-      </Container>
-    );
-  }
   return (
     <>
-      <Manager movies={movies} />
-      <ModalCreator />
+      {loading ? (
+        <Container className="d-flex justify-content-center mt-5">
+          <Loading />
+        </Container>
+      ) : (
+        <>
+          <Manager movies={movies} />
+          <ModalCreator />
+        </>
+      )}
     </>
   );
 }
